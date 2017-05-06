@@ -3,29 +3,27 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-// Routes
+// routes
 import { APP_ROUTING } from './app.routes';
 
-// Servicios
-import { SpotifyService } from './services/spotify.service';
+// servicios
+import { Auth } from './servcies/auth0.service';
 
-// Otros
+// otros
 
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
-import { SearchComponent } from './components/search/search.component';
-import { NavbarComponent } from './components/shared/navbar/navbar.component';
-import { SinfotoPipe } from './pipes/sinfoto.pipe';
-import { ArtistaComponent } from './components/artista/artista.component';
+import { PreciosComponent } from './components/precios/precios.component';
+import { ProtegidaComponent } from './components/protegida/protegida.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    SearchComponent,
     NavbarComponent,
-    SinfotoPipe,
-    ArtistaComponent
+    HomeComponent,
+    PreciosComponent,
+    ProtegidaComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +32,7 @@ import { ArtistaComponent } from './components/artista/artista.component';
     APP_ROUTING
   ],
   providers: [
-    SpotifyService
+    Auth
   ],
   bootstrap: [AppComponent]
 })

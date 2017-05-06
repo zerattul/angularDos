@@ -1,12 +1,12 @@
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
-import { SearchComponent } from './components/search/search.component';
-import { ArtistaComponent } from './components/artista/artista.component';
+import { PreciosComponent } from './components/precios/precios.component';
+import { ProtegidaComponent } from './components/protegida/protegida.component';
 
 const APP_ROUTES: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'buscar', component: SearchComponent },
-  { path: 'artista/:id', component: ArtistaComponent },
+  { path: 'precios', component: PreciosComponent },
+  { path: 'protegida', component: ProtegidaComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 
