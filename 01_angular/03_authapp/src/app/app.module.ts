@@ -7,9 +7,11 @@ import { HttpModule } from '@angular/http';
 import { APP_ROUTING } from './app.routes';
 
 // servicios
-import { Auth } from './servcies/auth0.service';
+import { Auth } from './services/auth0.service';
+import { AuthguardService } from './services/authguard.service';
 
 // otros
+//import { AUTH_PROVIDERS } from 'angular2-jwt';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -32,7 +34,9 @@ import { ProtegidaComponent } from './components/protegida/protegida.component';
     APP_ROUTING
   ],
   providers: [
-    Auth
+    Auth,
+    AuthguardService
+    //AUTH_PROVIDERS
   ],
   bootstrap: [AppComponent]
 })
